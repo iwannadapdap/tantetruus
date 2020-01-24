@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TanteTruusApp.Views.BudgetPage"
+             Title="Budget">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="Add_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Income and Expenses"
+                   Margin="10"
+                   HeightRequest="60" 
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="Center" />
+            <ListView x:Name="ExpensesListXAML" 
+                              RowHeight="60" 
+                              SeparatorVisibility="None"
+                              ItemSelected="OnExpensesItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black" Padding="0.1">
+                            <!-- Main design for our menu items -->
+                            <StackLayout VerticalOptions="FillAndExpand" 
+                                                 Orientation="Horizontal" 
+                                                 Padding="20,10,20,10"
+                                                 Spacing="20"
+                                                 BackgroundColor="White">
+                                <Label Text="{Binding Title}" 
+                                               FontSize="Medium"
+                                               VerticalOptions="Center"
+                                               FontAttributes="Bold"
+                                               TextColor="Black"/>
+                                    <Label Text="{Binding Type}"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       HorizontalOptions="EndAndExpand"
+                                       HorizontalTextAlignment="End"/>
+                                    <Label Text="{Binding CurAmount}"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="End"/>
+                                    <Label Text="/"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="End"/>
+                                    <Label Text="{Binding EstAmount}"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       TextColor="Black"
+                                       HorizontalTextAlignment="End"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout VerticalOptions="EndAndExpand" 
+                         Orientation="Horizontal" 
+                         Padding="20,10,20,10"
+                         Spacing="20"
+                         BackgroundColor="#428AF5">
+                <Label Text="Balance: " TextColor="Black" FontSize="Large"/>
+                <Label TextColor="Black" FontSize="Large" x:Name="cur_balanceLabel" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"/>
+                <Label Text="/" TextColor="Black" FontSize="Large" HorizontalTextAlignment="End"/>
+                <Label TextColor="Black" FontSize="Large" x:Name="est_balanceLabel" HorizontalTextAlignment="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="User" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">Recipe</div>
+                        <table class="user-table">
+                            {% for recipe in recipe_list %}
+                            <tr>
+                                <td>Uuid: </td>
+                                <td>{{recipe.recipe_uuid}}</td>
+                            </tr>
+                            <tr>
+                                <td>Title:
+                                <td>{{recipe.title}}</td>
+                            </tr>
+                            <tr>
+                                <td>Prep Time: </td>
+                                <td>{{recipe.prep_time}}</td>
+                            </tr>
+                            <tr>
+                                <td>Ingredients: </td>
+                                <td>
+                                    {% for ingredient in recipe.ingredients %}
+                                    - {{ingredient}}<br>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Preperation: </td>
+                                <td>
+                                    {% for step in recipe.preperation %}
+                                    - {{step}}<br>
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Created at: </td>
+                                <td>{{recipe.created_at}}</td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.SchedulePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Schedule"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Add_Clicked" Text="+" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <controls:Calendar
+                Margin="10"
+                x:Name="calendar"
+                Padding="10,0,10,0"
+                DateClicked="dateClicked"
+                DisabledBorderColor="Black"
+                SelectedBorderWidth="4"
+                SelectedDate="{Binding Date}"
+                ShowNumberOfWeek="false"
+                SpecialDates="{Binding Attendances}"
+                StartDay="Monday"
+                TitleLabelTextColor="#FFFFFF"
+                TitleLeftArrowTextColor="#FFFFFF"
+                TitleRightArrowTextColor="#FFFFFF"
+                VerticalOptions="Start" />
+            <StackLayout x:Name="DayPageStack" IsVisible="False">
+                <StackLayout
+                    HorizontalOptions="Fill"
+                    Orientation="Horizontal"
+                    VerticalOptions="Fill">
+                    <Label
+                        x:Name="DateHeader"
+                        FontSize="Large"
+                        HorizontalOptions="Start"
+                        VerticalOptions="CenterAndExpand" />
+                    <Button
+                        x:Name="AddEventToDayButton"
+                        Clicked="AddEventToDayButton_Clicked"
+                        HorizontalOptions="EndAndExpand"
+                        Text="+" />
+                    <Button
+                        x:Name="CloseDayButton"
+                        Clicked="CloseDayButton_Clicked"
+                        HorizontalOptions="EndAndExpand"
+                        Text="X" />
+                </StackLayout>
+                <ListView
+                    x:Name="scheduleListXAML"
+                    ItemSelected="OnScheduleItemSelected"
+                    RowHeight="60"
+                    SeparatorVisibility="None"
+                    VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="0.1" BorderColor="Black">
+                                    <!--  Main design for our menu items  -->
+                                    <StackLayout
+                                        Padding="10,10,0,10"
+                                        BackgroundColor="#AAAAAA"
+                                        Orientation="Horizontal"
+                                        Spacing="20"
+                                        VerticalOptions="FillAndExpand">
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding Title}"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label
+                                            FontSize="Medium"
+                                            HorizontalOptions="EndAndExpand"
+                                            Text="{Binding Start, StringFormat='{0:dd-MM-yyyy HH\\:mmu   }'}"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand" />
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

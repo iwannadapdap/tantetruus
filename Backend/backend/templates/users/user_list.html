@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Users" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+
+    <body class="text-center">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            {% include '_base_header.html' %}
+
+
+            <table class="table text-white bg-dark">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Birthdate</th>
+                        <th>Arduino uuid</th>
+                        <th>View</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for data in user_list %}
+                    <tr>
+                        <td>{{data.user.name}}</td>
+                        <td>{{data.user.email}}</td>
+                        <td>{{data.user.birthdate}}</td>
+                        <td><a href="/admin/arduinos/{{data.arduino.arduino_uuid}}">{{data.arduino.arduino_uuid}}</a>
+                        </td>
+                        <td>
+                            <a href="/admin/user/{{data.user.uuid}}" class="fas fa-address-card"></a>
+                        </td>
+                        <td>
+                            <a href="/admin/user/{{data.user.uuid}}/edit" class="far fa-edit"></a>
+                        </td>
+                        <td>
+                            <a href="/admin/user/{{data.user.uuid}}/delete" class="far fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            {% include '_base_footer.html' %}
+
+        </div>
+    </body>
+
+</html>

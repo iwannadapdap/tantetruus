@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Admin" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+
+        <main role="main" class="inner cover">
+            <div class="card-group">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Manage recipes</h5>
+                        <a href="/admin/recipes/add" class='btn btn-primary'>Add recipe</a>
+                        <a href="/admin/recipes/get" class="btn btn-primary">Recipes</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

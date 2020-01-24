@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="User" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">User</div>
+                        <form action="/admin/users/add" method="post">
+                            <table>
+                                <tr>
+                                    <td>Name: </td>
+                                    <td><input type="text" name="name" id="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email:
+                                    <td><input type="email" name="email" id="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password:
+                                    <td><input type="password" name="password" id="password" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Retype password:
+                                    <td><input type="password" name="confirm_password" id="confirm_password" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Birthdate: </td>
+                                    <td>
+                                        <input type="text" name="birthdate" id="birthdate" required>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button type="submit">Add user!</button>
+                        </form>
+                        {% if error %}
+                        <p style="color:red">{{error}}</p>
+                        {% endif%}
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

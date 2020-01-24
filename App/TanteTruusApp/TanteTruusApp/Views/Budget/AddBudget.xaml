@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TanteTruusApp.Views.AddBudget"
+             Title="Add">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Padding="10">
+                <Label Text="New Budget"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       FontSize="24"
+                       Margin="10"/>
+                <Entry x:Name="title_field"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="Title"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"
+                       Keyboard="Text"/>
+                <Picker x:Name="picker_field"
+                        Title="Type"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10">
+                    <Picker.Items>
+                        <x:String>Income</x:String>
+                        <x:String>Expense</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="estamount_field"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="Estimated € per month"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"
+                       Keyboard="Numeric"/>
+                <Button Text="Add"
+                        HorizontalOptions="Center"
+                        Clicked="AddBudgetToDB" />
+                <Label IsVisible="True"
+                       x:Name="error"
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       FontSize="18"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

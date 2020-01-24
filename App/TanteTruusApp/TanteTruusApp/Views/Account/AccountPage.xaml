@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.AccountPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Account"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="StartAndExpand"
+                FontSize="Title"
+                Margin="5"
+                Text="Account information" />
+            <Label
+                x:Name="Name"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium"
+                Margin="5"
+                Text="Name: " />
+            <Label
+                x:Name="Email"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium"
+                Margin="5"
+                Text="Email: " />
+            <Label
+                x:Name="Age"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium"
+                Margin="5"
+                Text="Age: " />
+            <Label
+                x:Name="Created_at"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium"
+                Margin="5"
+                Text="Created at: " />
+            <Label
+                x:Name="Last_login"
+                HorizontalOptions="StartAndExpand"
+                FontSize="Medium"
+                Margin="5"
+                Text="Last login: " />
+            <Label x:Name="error" TextColor="Red" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button
+                    Clicked="EditAccount"
+                    Text="Edit Account"
+                    HorizontalOptions="Center" />
+                <Button
+                x:Name="LogOut_button"
+                Clicked="LogOut"
+                HorizontalOptions="Center"
+                Text="Log out"
+                TextColor="Red"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

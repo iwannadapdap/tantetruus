@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TanteTruusApp.Views.EditAccount"
+             Title="Edit Account">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Edit account information"
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Name: "
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Medium" />
+                <Entry Placeholder="Name"
+                        BackgroundColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="250"
+                        HorizontalOptions="Center" 
+                        x:Name="NameEntry"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="E-mail: "
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Medium" />
+                <Entry Placeholder="E-mail"
+                        BackgroundColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" 
+                        x:Name="EmailEntry"
+                        WidthRequest="250"
+                        IsEnabled="False"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Date of birth: "
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Medium" />
+                <DatePicker x:Name="DateField"
+                       Format="d"
+                       BackgroundColor="White"
+                       HorizontalOptions="Center"
+                            WidthRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="New Password: "
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Medium" />
+                <Entry Placeholder="Password"
+                        BackgroundColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" 
+                        x:Name="PasswordEntry"
+                        WidthRequest="200"
+                        IsPassword="True" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="New Password: "
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Medium" />
+                <Entry Placeholder="Password (repeat)"
+                        BackgroundColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" 
+                        x:Name="PasswordEntry2"
+                        WidthRequest="200"
+                        IsPassword="True" />
+            </StackLayout>
+            <Button Text="Apply changes"
+                    Clicked="UpdateUser"
+                    HorizontalOptions="Center" />
+            <Label
+                    x:Name="error"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    IsVisible="True"
+                    TextColor="Red" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

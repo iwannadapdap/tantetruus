@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="User" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">User</div>
+                        {% for user in user_list %}
+                        <form action="/admin/user/{{user.uuid}}/edit" method="post">
+                            <table>
+                                <tr>
+                                    <td>Name: </td>
+                                    <td><input type="text" name="name" id="name" value={{user.name}}></td>
+                                </tr>
+                                <tr>
+                                    <td>Email:
+                                    <td><input type="email" name="email" id="email" value={{user.email}}></td>
+                                </tr>
+                                <tr>
+                                    <td>Birthdate: </td>
+                                    <td>
+                                        <input type="text" name="birthdate" id="birthdate" value={{user.birthdate}}
+                                            required>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button type="submit">Edit user!</button>
+                            {% endfor%}
+                        </form>
+                        {% if error %}
+                        <p style="color:red">{{error}}</p>
+                        {% endif%}
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Settings"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Notifications:"
+                    VerticalOptions="Center" />
+                <Switch
+                    x:Name="notifications_enabled_switch"
+                    HorizontalOptions="StartAndExpand"
+                    IsToggled="True"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Alarm:"
+                    VerticalOptions="Center" />
+                <Switch
+                    x:Name="alarm_enabled_switch"
+                    HorizontalOptions="StartAndExpand"
+                    IsToggled="True"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+
+            <Button
+                x:Name="UpdatePreferences"
+                Clicked="UpdatePreferences_Clicked"
+                HorizontalOptions="Center"
+                Text="Update preferences"
+                VerticalOptions="End" 
+                Margin="20"/>
+            <Label
+                x:Name="message_label"
+                HorizontalOptions="Center"
+                VerticalOptions="End" />
+            <Button
+                Margin="20"
+                Clicked="Add_Arduino"
+                Text="Add Arduino Module" />
+            <Label
+                x:Name="error"
+                HorizontalOptions="Center"
+                VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

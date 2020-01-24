@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Email" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+
+        <main role="main" class="inner cover">
+            <div class="card-group">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Email Panel</h5>
+                        <form method="POST" action="/admin/email/send">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Email:
+                                    </td>
+                                    <td>
+                                        {% if user %}
+                                        <input type="email" name="email" id="email" value={{user.email}} list="users">
+                                        {% else %}
+                                        <input type="email" name="email" id="email" placeholder="email" list="users">
+                                        {% endif %}
+                                    </td>
+                                    <datalist id="users">
+                                        {% for user in user_list %}
+                                        <option value="{{user.email}}">{{user.name}} | {{user.uuid}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Subject:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="subject" id="subject" placeholder="subject">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Message:
+                                    </td>
+                                    <td>
+                                        <textarea name="content" id="content" cols="22" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-primary">Send email!</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

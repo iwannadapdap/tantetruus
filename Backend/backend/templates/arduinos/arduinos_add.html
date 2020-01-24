@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Arduino" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">Arduino</div>
+                        <form action="/admin/arduinos/add" method="post">
+                            <table class="user-table">
+                                <tr>
+                                    <td>Arduino_uuid: </td>
+                                    <td><input type="text" name="arduino_uuid" id="arduino_uuid"
+                                            placeholder="Leave empty to randomise"></td>
+                                </tr>
+                                <tr>
+                                    <td>User_uuid: </td>
+                                    <td><input type="text" name="user_uuid" id="user_uuid" placeholder="Optional">
+                                    </td>
+                                </tr>
+                            </table>
+                            <button type="submit">Add Arduino</button>
+                        </form>
+                        {% if error %}
+                        <p class="error">{{error}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

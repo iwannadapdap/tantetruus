@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Databases" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+
+        <main role="main" class="inner cover">
+            <div class="card-group">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Database Panel</h5>
+                        <a href="/admin/databases/delete_all_arduinos" class='btn btn-warning'
+                            style="color: white;">Delete all arduinos</a>
+                        <a href="/admin/databases/delete_all_users" class="btn btn-warning" style="color: white;">Delete
+                            all users</a>
+                        <a href="/admin/databases/delete_all_recipes" class="btn btn-warning"
+                            style="color: white;">Delete all recipes</a>
+                        <a href="/admin/databases/yeet_database" class="btn btn-danger">DROP DATABASE</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

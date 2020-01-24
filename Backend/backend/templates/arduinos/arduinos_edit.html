@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Arduino" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">Arduino</div>
+                        {% for arduino in arduino_list%}
+                        <form action="/admin/arduinos/{{arduino.arduino_uuid}}/edit" method="post">
+                            <table class="user-table">
+                                <tr>
+                                    <td>Arduino_uuid: </td>
+                                    <td><input type="text" name="arduino_uuid" id="arduino_uuid"
+                                            value="{{arduino.arduino_uuid}}" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>User_uuid: </td>
+                                    <td>
+                                        <input type="text" list="users" id="selected_user" name="selected_user"
+                                            autocomplete="off">
+                                    </td>
+                                    <datalist id="users">
+                                        {% for user in user_list %}
+                                        <option value="{{user.uuid}}">{{user.name}} </option>
+                                        {% endfor %}
+                                    </datalist>
+                                </tr>
+                            </table>
+                            <button type=" submit">Edit Arduino</button>
+                        </form>
+                        {%endfor%}
+                        {% if error %}
+                        <p class="error">{{error}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

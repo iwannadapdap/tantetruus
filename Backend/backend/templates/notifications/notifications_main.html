@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Notifcation" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+
+        <main role="main" class="inner cover">
+            <div class="card-group">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Notifcation Panel</h5>
+                        <form method="POST" action="/admin/notifications/send">
+                            <table>
+                                <tr>
+                                    <td>
+                                        User UUID:
+                                    </td>
+                                    <td>
+                                        {% if user %}
+                                        <input type="text" name="uuid" id="uuid" value={{user.uuid}} list="users">
+                                        {% else %}
+                                        <input type="text" name="uuid" id="uuid" placeholder="uuid" list="users">
+                                        {% endif %}
+                                    </td>
+                                    <datalist id="users">
+                                        {% for user in user_list %}
+                                        <option value="{{user.uuid}}">{{user.name}} | {{user.email}}</option>
+                                        {% endfor %}
+                                    </datalist>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Subject:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="title" id="title" placeholder="subject">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Message:
+                                    </td>
+                                    <td>
+                                        <textarea name="message" id="message" cols="22" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <button class="btn btn-primary">Send notification!</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

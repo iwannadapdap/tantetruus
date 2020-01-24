@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.ShowRecipe"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                x:Name="title_field"
+                FontSize="36"
+                FontAttributes="Italic, Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+            <Label
+                x:Name="prepTime_field"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+            <Label
+                Text="Ingredients:"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" 
+                Margin="10"/>
+            <Label
+                x:Name="ingredients_field"
+                FontSize="Medium"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"/>
+            <Label
+                Text="Preparation:"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" 
+                Margin="10"/>
+            <Label
+                x:Name="preperation_field"
+                FontSize="Medium"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" 
+                Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

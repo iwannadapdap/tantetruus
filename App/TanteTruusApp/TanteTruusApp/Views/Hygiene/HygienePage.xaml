@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.HygienePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Hygiene"
+    BackgroundColor="#333333"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Open_Help" Text="?"/>
+        <ToolbarItem Clicked="Open_Settings" Text="Settings" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid
+            Margin="10"
+            ColumnSpacing="10"
+            RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="0"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="SheetsDone"
+                HorizontalOptions="FillAndExpand"
+                Source="Sheets.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="SheetsLabel"
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="SheetsDateLabel"
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="SheetsXLabel"
+                Grid.Row="0"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+            <ImageButton
+                Grid.Row="0"
+                Grid.Column="1"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="BathroomDone"
+                HorizontalOptions="FillAndExpand"
+                Source="Bathroom.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="BathroomLabel"
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="BathroomDateLabel"
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="BathroomXLabel"
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+            <ImageButton
+                Grid.Row="1"
+                Grid.Column="0"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="HouseDone"
+                HorizontalOptions="FillAndExpand"
+                Source="House.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="HouseLabel"
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="HouseDateLabel"
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="HouseXLabel"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+            <ImageButton
+                Grid.Row="1"
+                Grid.Column="1"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="KitchenDone"
+                HorizontalOptions="FillAndExpand"
+                Source="Kitchen.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="KitchenLabel"
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="KitchenDateLabel"
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="KitchenXLabel"
+                Grid.Row="1"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="0"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="DishesDone"
+                HorizontalOptions="FillAndExpand"
+                Source="Dishes.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="DishesLabel"
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="DishesDateLabel"
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="DishesXLabel"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+            <ImageButton
+                Grid.Row="2"
+                Grid.Column="1"
+                Aspect="AspectFit"
+                BackgroundColor="White"
+                Clicked="VacuumDone"
+                HorizontalOptions="FillAndExpand"
+                Source="Vacuum.png"
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="VacuumLabel"
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="VacuumDateLabel"
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand" />
+            <Label
+                x:Name="VacuumXLabel"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text=" ✘"
+                TextColor="Red"
+                VerticalOptions="Start" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

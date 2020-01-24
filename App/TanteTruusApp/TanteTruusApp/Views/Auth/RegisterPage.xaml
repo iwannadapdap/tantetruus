@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TanteTruusApp.Views.RegisterPage">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" BackgroundColor="#333333" Padding="10">
+                <Label Text="Tante Truus"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       FontSize="36"
+                       Margin="10"/>
+                <Label Text="REGISTER"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       FontSize="28"
+                       Margin="10"/>
+                <Entry x:Name="name_field"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="Name"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"
+                       Keyboard="Text"/>
+                <Entry x:Name="email_field"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="E-mail"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"
+                       Keyboard="Email"/>
+                <Entry x:Name="password_field"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="Password"
+                       IsPassword="True"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"/>
+                <Entry x:Name="password_field2"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Placeholder="Password (repeat)"
+                       IsPassword="True"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"/>
+                <DatePicker x:Name="date_field"
+                       Format="d"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       WidthRequest="250"
+                       Margin="10"/>
+
+                <Button Text="Register" 
+                        Clicked="Register"
+                        HorizontalOptions="Center"
+                        WidthRequest="200"
+                        Margin="10"/>
+                <Label IsVisible="True"
+                       x:Name="error"
+                       TextColor="Red"
+                       HorizontalOptions="Center"
+                       FontSize="18"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

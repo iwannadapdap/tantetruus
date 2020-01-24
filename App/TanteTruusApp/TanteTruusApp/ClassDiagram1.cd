@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="TanteTruusApp.Helpers.http_request" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\http_request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.ExpenseItem" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAEAAAAAAAAAAACAAAAAAAQACAAAAAAA=</HashCode>
+      <FileName>Models\ExpenseItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.HygieneItem" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\HygieneItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.MasterPageItem" Collapsed="true">
+    <Position X="15" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAEAAAA=</HashCode>
+      <FileName>Models\MasterPageItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.Recipe" Collapsed="true">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAEAQAAAAACAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.ScheduleItem" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAAAAAiAAAEAAAAIAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ScheduleItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Models.User" Collapsed="true">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAEAAAAQAAAAAAAAgAAAAAAABAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Response" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAAAA=</HashCode>
+      <FileName>Models\Response.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.AccountPage" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAwAAAAIAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Views\Account\AccountPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.EditAccount" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Account\EditAccount.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.LoginPage" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAgA=</HashCode>
+      <FileName>Views\Auth\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.RegisterPage" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Auth\RegisterPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.AddBudget" Collapsed="true">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Views\Budget\AddBudget.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.BudgetPage" Collapsed="true">
+    <Position X="15" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAQAAAQAQA=</HashCode>
+      <FileName>Views\Budget\BudgetPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.UpdateCurrent" Collapsed="true">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIgAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Budget\UpdateCurrent.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.FoodPage" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Food\FoodPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.ShowRecipe" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Food\ShowRecipe.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.HygienePage" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAEEAAAgAAAQAAAAAAEAAAAAAASAAAABAAAAAAAA=</HashCode>
+      <FileName>Views\Hygiene\HygienePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.HygieneSettings" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Hygiene\HygieneSettings.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.AddEvent" Collapsed="true">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Schedule\AddEvent.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.EditEvent" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAgEAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Schedule\EditEvent.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.SchedulePage" Collapsed="true">
+    <Position X="13.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAACAAAgAgQQABAACAADAAAAAAAABAAAAAAAAAQA=</HashCode>
+      <FileName>Views\Schedule\SchedulePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.AboutPage" Collapsed="true">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AboutPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.ExercisePage" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ExercisePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.Views.SettingsPage" Collapsed="true">
+    <Position X="15" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAAAAAAQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SettingsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.App" Collapsed="true">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TanteTruusApp.MainPage" Collapsed="true">
+    <Position X="13.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TanteTruusApp.Helpers.IQrScanningService" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\IQrScanningServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

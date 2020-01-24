@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr:namespace.TanteTruus.Views">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="#333333">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Image
+                    Margin="40"
+                    HorizontalOptions="Center"
+                    Source="login.png"
+                    VerticalOptions="Center"
+                    Aspect="AspectFit"/>
+                <Label
+                    Margin="10"
+                    FontSize="28"
+                    HorizontalOptions="Center"
+                    Text="LOGIN"
+                    TextColor="White" />
+                <Entry
+                    x:Name="loginid"
+                    Margin="10"
+                    BackgroundColor="White"
+                    HorizontalOptions="Center"
+                    Placeholder="E-mail"
+                    TextColor="Black"
+                    WidthRequest="250" 
+                    Keyboard="Email"/>
+                <Entry
+                    x:Name="passid"
+                    Margin="10"
+                    BackgroundColor="White"
+                    HorizontalOptions="Center"
+                    IsPassword="True"
+                    Placeholder="Password"
+                    TextColor="Black"
+                    WidthRequest="250" />
+                <Button
+                    Margin="10"
+                    Clicked="login_button_click"
+                    HorizontalOptions="Center"
+                    Text="Log in"
+                    WidthRequest="200" />
+                <Button
+                    Margin="10"
+                    Clicked="RedirectToRegisterPage"
+                    HorizontalOptions="Center"
+                    Text="Register"
+                    WidthRequest="200" />
+                <Button
+                    x:Name="resend_button"
+                    Margin="10"
+                    Clicked="ResendVerificationEmail"
+                    HorizontalOptions="Center"
+                    IsVisible="False"
+                    Text="Re-send"
+                    WidthRequest="200" />
+                <Label
+                    x:Name="error"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    IsVisible="True"
+                    TextColor="Red" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

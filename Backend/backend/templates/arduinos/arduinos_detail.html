@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="Arduino" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">Arduino</div>
+                        <table class="user-table">
+                            {% for arduino in arduino_list %}
+                            <tr>
+                                <td>UUID: </td>
+                                <td>{{arduino.arduino_uuid}}</td>
+                            </tr>
+                            <tr>
+                                <td>User UUID: </td>
+                                <td><a href="/admin/user/{{arduino.user_uuid}}">{{arduino.user_uuid}}</a></td>
+                            </tr>
+                            <tr>
+                                <td>Created at: </td>
+                                <td>{{arduino.created_at}}</td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

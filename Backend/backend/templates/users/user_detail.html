@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+{% with title="User" %}
+{% include '_base_head.html' %}
+{% endwith %}
+
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        {% include '_base_header.html' %}
+        <main role="main" class="inner cover">
+            <div class="card-group">
+
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-title h5">User</div>
+                        <table class="user-table">
+                            {% for data in user_list %}
+                            <tr>
+                                <td>UUID: </td>
+                                <td>{{data.user.uuid}}</td>
+                            </tr>
+                            <tr>
+                                <td>Name: </td>
+                                <td>{{data.user.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:
+                                <td>{{data.user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Birthdate: </td>
+                                <td>{{data.user.birthdate}}</td>
+                            </tr>
+                            <tr>
+                                <td>Arduino uuid: </td>
+                                <td>
+                                    {%if data.arduino.arduino_uuid%}
+                                    <a
+                                        href="/admin/arduinos/{{data.arduino.arduino_uuid}}">{{data.arduino.arduino_uuid}}</a>
+                                    {%else%}
+                                    {{" None"}}
+                                    {%endif%}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Firebase token: </td>
+                                <td class="ellipsis">
+                                    <span>{{data.user.install_id}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Is verified: </td>
+                                <td>
+                                    {{data.user.is_verified}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Verified on: </td>
+                                <td>
+                                    {{data.user.verified_on}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Last login: </td>
+                                <td>{{data.user.last_login}}</td>
+                            </tr>
+                            <tr>
+                                <td>Created at: </td>
+                                <td>{{data.user.created_at}}</td>
+                            </tr>
+
+                        </table>
+                        <a href="/admin/email/resend_verification_email/{{data.user.uuid}}"
+                            class='btn btn-primary'>Resend verification email
+                        </a>
+                        <a href="/admin/email/{{data.user.uuid}}" class='btn btn-primary'>Send
+                            email
+                        </a>
+                        <a href="/admin/notifications/{{data.user.uuid}}" class='btn btn-primary'>Send
+                            notification
+                        </a>
+                        <a href="/admin/schedule/{{data.user.uuid}}" class='btn btn-primary disabled'>View schedule
+                        </a>
+                        <a href="/admin/expenses/{{data.user.uuid}}" class='btn btn-primary disabled'>View expenses
+                        </a>
+
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </main>
+
+        {% include '_base_footer.html' %}
+    </div>
+</body>
+
+</html>

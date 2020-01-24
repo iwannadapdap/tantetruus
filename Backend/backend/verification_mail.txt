@@ -1,0 +1,8 @@
+Dear ${PERSON_NAME}, 
+
+Please click the following link to confirm your account:
+https://tantetruus.ovh/auth/confirm/${TOKEN}
+
+Greetings,
+
+Tante Truus

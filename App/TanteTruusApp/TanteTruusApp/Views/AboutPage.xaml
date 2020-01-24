@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TanteTruusApp.Views.AboutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="About"
+    mc:Ignorable="d">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo_whitetext.png"
+                   HorizontalOptions="Center"
+                   Margin="40"/>
+            <Label
+                LineBreakMode="WordWrap"
+                FontSize="Medium"
+                Text="TanteTruus was designed by students, for students. Keeping track of your planning, managing your budget and being reminded to clean every once in a while has never been easier! If you've just started to live alone and need a little reminder sometimes, this app is perfect for you!"
+                VerticalOptions="Center"
+                Margin="10"/>
+            <Label
+                LineBreakMode="WordWrap"
+                FontSize="Medium"
+                Text="The TanteTruus application is built by student by first-year ICT students of Fontys University of Applied Sciences. It serves as their project for the end of the first semester."
+                VerticalOptions="Center"
+                Margin="10"/>
+            <Label
+                LineBreakMode="WordWrap"
+                FontSize="Medium"
+                Text="Created by:&#x0a;Walter Sajtos (Software Engineering)&#x0a;Robin van der Sanden (software engineering)&#x0a;Lizzy Strick (media design)&#x0a;James Zhou (Business)&#x0a;Ihsan Topcu (Technology)."
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

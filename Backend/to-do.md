@@ -1,0 +1,6 @@
+- [x] event notifications
+- [z] foodpage webscraping
+- [x] Easy linking arduino
+- [ ] Go to arduino from user line
+- [ ] Proper styling/ layout
+- [ ] Prevent double generated UUID

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="TanteTruusApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TanteTruusApp">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <Grid BackgroundColor="#333333">
+                <StackLayout
+                    Grid.Row="0"
+                    Margin="20,20,20,0"
+                    Spacing="15">
+                    <Image Source="logo_small.png"
+                           WidthRequest="100"
+                           HeightRequest="150"
+                           Aspect="AspectFit"/>
+                    <ListView
+                        x:Name="navigationDrawerList"
+                        BackgroundColor="#666666"
+                        ItemSelected="OnMenuItemSelected"
+                        RowHeight="60"
+                        SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <!--  Main design for our menu items  -->
+                                    <StackLayout
+                                        Padding="20,10,0,10"
+                                        Orientation="Horizontal"
+                                        Spacing="20"
+                                        VerticalOptions="FillAndExpand">
+                                        <Image
+                                            HeightRequest="40"
+                                            Source="{Binding Icon}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="40" />
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding Title}"
+                                            TextColor="White"
+                                            VerticalOptions="Center"
+                                            FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

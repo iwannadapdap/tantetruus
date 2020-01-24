@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TanteTruusApp.Views.HygieneSettings"
+             Title="Edit reminders">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter after how many days you would like to be reminded."
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="Medium"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   Margin="20"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Sheets: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="Sheets_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Bathroom: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="Bathroom_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="House: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="House_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Kitchen: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="Kitchen_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Dishes: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="Dishes_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Vacuum: "
+                HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                <Editor Placeholder="Amount"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        x:Name="Vacuum_reminder"
+                        BackgroundColor="White"
+                        Keyboard="Numeric"/>
+                <Label Text="days"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+            </StackLayout>
+            <Button HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Update Preferences"
+                    Clicked="Update_Preferences"
+                    Margin="20"/>
+            <Label TextColor="Red"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   x:Name="error"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
