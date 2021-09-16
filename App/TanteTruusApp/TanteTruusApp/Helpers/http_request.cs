@@ -13,7 +13,7 @@ namespace TanteTruusApp.Helpers
         {
             HttpClient client = new HttpClient();
 
-            client.BaseAddress = new Uri("https://www.tantetruus.ovh/");
+            client.BaseAddress = new Uri("34.131.166.34:5000/");
 
             HttpContent content = new FormUrlEncodedContent(data);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
@@ -55,7 +55,7 @@ namespace TanteTruusApp.Helpers
         {
             HttpClient client = new HttpClient();
 
-            client.BaseAddress = new Uri("https://www.tantetruus.ovh/");
+            client.BaseAddress = new Uri("34.131.166.34:5000/");
 
             var result = await client.GetAsync(url_extention);
             try

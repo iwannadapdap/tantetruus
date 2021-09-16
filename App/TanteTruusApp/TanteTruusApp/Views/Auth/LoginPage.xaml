@@ -23,7 +23,7 @@
                     Margin="10"
                     FontSize="28"
                     HorizontalOptions="Center"
-                    Text="LOGIN"
+                    Text="Login"
                     TextColor="White" />
                 <Entry
                     x:Name="loginid"
